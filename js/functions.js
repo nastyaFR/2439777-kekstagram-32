@@ -17,5 +17,3 @@ function checkPalindrome (string) {
   const palindrome = (backString === normalizeString);
   return palindrome;
 }
-
-checkPalindrome ();
