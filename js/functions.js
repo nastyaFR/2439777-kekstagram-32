@@ -1,19 +1,10 @@
 // Функция для проверки длины строки
-const checkLengthString = (string, maxLength) => {
-  const correctLengthString = string.length <= maxLength;
-  return correctLengthString;
-};
-
-checkLengthString();
+const checkLengthString = (string, maxLength) => string.length <= maxLength;
 
 // Функция для проверки, является ли строка палиндромом
-function checkPalindrome (string) {
-  string = string.replaceAll(' ', '').toLowerCase();
-  const normalizeString = string;
-  let backString = '';
-  for (let i = normalizeString.length - 1; i >= 0; i--) {
-    backString += normalizeString.at(i);
-  }
-  const palindrome = (backString === normalizeString);
-  return palindrome;
-}
+const checkPalindrome = (string) => {
+  const cleaned = string.replaceAll(' ', '').toLowerCase();
+  const normalizeString = cleaned.split('').reverse().join('');
+
+  return cleaned === normalizeString;
+};
