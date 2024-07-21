@@ -10,3 +10,13 @@ const createThumbnail = (picture) => {
 
   return thumbnail;
 };
+
+const generateThumbnails = (pictures) => {
+  const fragment = document.createDocumentFragment();
+  pictures.forEach((picture) => {
+    const thumbnail = createThumbnail(picture);
+    fragment.append(thumbnail);
+  });
+
+  container.append(fragment);
+};
