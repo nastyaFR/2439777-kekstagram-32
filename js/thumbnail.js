@@ -1,7 +1,7 @@
 const thumbNailYemplate = document.querySelector('#picture').content.querySelector('.picture');
 
 const createThumbnail = (picture) => {
-  const thumbnail = thumbNailYemplate.clone(true);
+  const thumbnail = thumbNailYemplate.cloneNode(true);
 
   thumbnail.querySelector('.picture__img').src = picture.url;
   thumbnail.querySelector('.picture__img').alt = picture.description;
@@ -20,3 +20,4 @@ const generateThumbnails = (pictures) => {
 
   container.append(fragment);
 };
+export{generateThumbnails};
