@@ -12,12 +12,12 @@ const overlay = form.querySelector('.img-upload__overlay');
 const cancelButton = form.querySelector('.img-upload__cancel');
 const fileField = form.querySelector('.img-upload__input');
 const hashtagField = form.querySelector('.text__hashtags');
-const commentField = form.querySelector('.text__descrition');
+const commentField = form.querySelector('.text__description');
 
 const pristine = new Pristine(form, {
   classTo: 'img-upload__field-wrapper',
   errorTextParent: 'img-upload__field-wrapper',
-  errorTextClass: 'img-upload__field-wrapper__error',
+  errorTextClass: 'img-upload__field-wrapper--error',
 });
 
 const showModal = () => {
@@ -75,23 +75,17 @@ const onFormSubmit = (evt) => {
 pristine.addValidator(
   hashtagField,
   hasValidCount,
-  ErrorText.INVALID_COUNT,
-  3,
-  true
+  ErrorText.INVALID_COUNT
 );
 pristine.addValidator(
   hashtagField,
   hasUniqueTags,
-  ErrorText.NOT_UNIQUE,
-  2,
-  true
+  ErrorText.NOT_UNIQUE
 );
 pristine.addValidator(
   hashtagField,
   hasValidTags,
-  ErrorText.INVALID_PATTERN,
-  1,
-  true
+  ErrorText.INVALID_PATTERN
 );
 
 fileField.addEventListener('change', onFileInputChange);
