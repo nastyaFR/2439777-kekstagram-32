@@ -34,7 +34,7 @@ const hideModal = () => {
   document.removeEventListener('keydown', onDocumentKeydown);
 };
 
-const isTextFiledFocused = () =>
+const isTextFieldFocused = () =>
   document.activeElement === hashtagField ||
 document.activeElement === commentField;
 
@@ -53,7 +53,7 @@ const hasUniqueTags = (value) => {
 };
 
 function onDocumentKeydown(evt) {
-  if (evt.key === 'Escape' && !isTextFiledFocused()) {
+  if (evt.key === 'Escape' && !isTextFieldFocused()) {
     evt.preventDefault();
     hideModal();
   }
