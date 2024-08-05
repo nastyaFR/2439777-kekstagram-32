@@ -2,7 +2,7 @@ const Effect = {
   DEFAULT: 'none',
   CHROME: 'chrome',
   SEPIA: 'sepia',
-  MARVIN: 'marvn',
+  MARVIN: 'marvin',
   PHOBOS: 'phobos',
   HEAT: 'heat',
 };
@@ -21,7 +21,7 @@ const effectToFilter = {
     unit: '%',
   },
   [Effect.PHOBOS]: {
-    style: 'biur',
+    style: 'blur',
     unit: 'px',
   },
   [Effect.HEAT]: {
