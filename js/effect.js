@@ -125,7 +125,7 @@ const setSlider = () => {
   if(isDefault()) {
     hideSlider();
   } else {
-    updateSlider(effectToFilter[chosenEffect]);
+    updateSlider(effectToSliderOptions[chosenEffect]);
     showSlider();
   }
 };
